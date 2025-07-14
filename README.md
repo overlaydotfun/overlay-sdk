@@ -11,7 +11,7 @@ TypeScript SDK for the [overlay.fun](https://overlay.fun) API.
 ## Installation
 
 ```bash
-npm install overlay-sdk
+npm install @overlay.fun/kit
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm install overlay-sdk
 ### Basic Setup
 
 ```typescript
-import { OverlayClient } from 'overlay-sdk';
+import { OverlayClient } from '@overlay.fun/kit';
 
 // Initialize client with devnet
 const client = new OverlayClient({
@@ -125,11 +125,11 @@ await client.nft.burn('mint-address');
 ### Complete Example
 
 ```typescript
-import OverlayClient from 'overlay-sdk';
+import OverlayClient from '@overlay.fun/kit';
 
 // initialize
 const client = new OverlayClient({
-  network: 'devnet',
+  env: 'devnet',
   apiKey: 'your-wallet-secret-key'
 });
 
