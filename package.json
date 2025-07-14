@@ -1,5 +1,5 @@
 {
-  "name": "@overlaydotfun/kit",
+  "name": "@overlay.fun/kit",
   "version": "1.0.0",
   "description": "TypeScript SDK for overlay.fun API",
   "main": "dist/index.js",
