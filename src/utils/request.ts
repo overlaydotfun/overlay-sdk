@@ -23,7 +23,8 @@ export class RequestHandler {
   private getHeaders(): Record<string, string> {
     return {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${this.config.apiKey}`
+      'api-key': this.config.api_key,
+      'auth_key': this.config.auth_key
     };
   }
 
@@ -42,7 +43,7 @@ export class RequestHandler {
   }
 
   async post<T>(endpoint: string, data?: any): Promise<T> {
-    const url = `https://devnet.overlay.fun${endpoint}`;
+    const url = `${this.getBaseUrl()}${endpoint}`;
     const response = await fetch(url, {
       method: 'POST',
       headers: this.getHeaders(),

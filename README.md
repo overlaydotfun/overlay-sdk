@@ -24,7 +24,8 @@ import { OverlayClient } from '@overlay.fun/kit';
 // Initialize client with devnet
 const client = new OverlayClient({
   env: 'devnet', // or 'mainnet'
-  apiKey: 'api key'
+  api_key: 'your-wallet-api-key',
+  auth_key: 'your-wallet-auth-key'
 });
 ```
 
@@ -130,7 +131,8 @@ import OverlayClient from '@overlay.fun/kit';
 // initialize
 const client = new OverlayClient({
   env: 'devnet',
-  apiKey: 'your-wallet-secret-key'
+  api_key: 'your-wallet-api-key',
+  auth_key: 'your-wallet-auth-key'
 });
 
 

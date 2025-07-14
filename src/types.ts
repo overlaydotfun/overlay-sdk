@@ -1,6 +1,7 @@
 export interface OverlayConfig {
   env: 'devnet' | 'mainnet';
-  apiKey: string;
+  api_key: string;
+  auth_key: string;
 }
 
 export interface WalletResponse {
