@@ -24,7 +24,7 @@ export class RequestHandler {
     return {
       'Content-Type': 'application/json',
       'api-key': this.config.api_key,
-      'auth_key': this.config.auth_key
+      'auth-key': this.config.auth_key
     };
   }
 
