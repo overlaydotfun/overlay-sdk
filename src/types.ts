@@ -53,7 +53,7 @@ export interface CreateNFTRequest {
   name: string;
   description?: string;
   images?: string[];
-  website>: string;
+  website: string;
   seller_fee?: string;
   attributes?: Array<{
     trait_type: string;
