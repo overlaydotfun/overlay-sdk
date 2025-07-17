@@ -20,8 +20,16 @@ export interface NFTResponse {
 }
 
 export interface LaunchTokenRequest {
-  tx: string;
-  mint_address: string;
+  network: string;
+  name: string;
+  symbol: string;
+  description?: string;
+  image?: string;
+  decimals?: number;
+  supply: string;
+  website?: string;
+  seller_fee?: string;
+  config_address: string
 }
 
 export interface CreateWalletRequest {
@@ -32,19 +40,21 @@ export interface CreateTokenRequest {
   network: string;
   name: string;
   symbol: string;
-  description: string;
-  image: string;
-  decimals: number;
+  description?: string;
+  image?: string;
+  decimals?: number;
   supply: string;
-  website: string;
+  website?: string;
+  seller_fee?: string;
 }
 
 export interface CreateNFTRequest {
   network: string;
   name: string;
-  description: string;
-  image: string;
-  website: string;
+  description?: string;
+  images?: string[];
+  website>: string;
+  seller_fee?: string;
   attributes?: Array<{
     trait_type: string;
     value: string;
@@ -71,8 +81,8 @@ export interface MintTokenRequest {
 export interface MintNFTRequest {
   network: string;
   name: string;
-  description: string;
-  image: string;
+  description?: string;
+  images?: string[];
 }
 
 export interface BurnTokenRequest {
